@@ -11,6 +11,7 @@ const forecast = require('./utils/forecast')
 // console.log(path.join(__dirname,'../public'));
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // this is used for css, js, img file in that we can stored.
 // also we can create html file and we can see in server using
@@ -123,6 +124,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log('Express Web server is running at 3000 port');
+app.listen(port, () => {
+  console.log('Express Web server is running at'+ port);
 })
